@@ -4,7 +4,7 @@ import warnings
 
 from datetime import datetime
 
-from first_project.crew import Calculator
+from calculator.crew import Calculator
 
 warnings.filterwarnings("ignore", category=SyntaxWarning, module="pysbd")
 
