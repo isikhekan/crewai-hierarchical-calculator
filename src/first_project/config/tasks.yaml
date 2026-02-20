@@ -1,0 +1,36 @@
+solve_math_problem:
+  description: >
+    Kullanıcının problemi: {topic}
+    
+    Talimatlar:
+    1. Problemi analiz et.
+    2. Eğer problem çarpma ise, işi KESİNLİKLE "Çarpma İşlemi Uzmanı" rolüne sahip çalışma arkadaşına devret.
+    3. Toplama ise "Toplama İşlemi Uzmanı"na, çıkarma ise "Çıkarma İşlemi Uzmanı"na devret.
+    4. İşi devrederken (delegate_work_to_coworker) 'coworker' parametresine uzmanın tam ROL adını yaz.
+  expected_output: >
+    Uzmandan gelen nihai doğru sonuç.
+
+addition_task:
+  description: >
+    {topic} te verilen sayıları topla. 
+    İşlemi adım adım göster ve sonucu belirt.
+  expected_output: >
+    Toplama işleminin detaylı dökümü ve nihai toplam sonucu.
+  agent: addition_specialist
+
+subtraction_task:
+  description: >
+    {topic} te verilen sayıları çıkart. 
+    Aradaki farkı net bir şekilde açıkla.
+  expected_output: >
+    Çıkarma işleminin aşamaları ve elde edilen fark değeri.
+  agent: subtraction_specialist
+
+multiplication_task:
+  description: >
+    {topic} te verilen sayıları çarp. 
+    Çarpım tablosu mantığıyla sonucu hesapla.
+  expected_output: >
+    Çarpma işleminin sonucu ve çarpanların analizini içeren rapor.
+  agent: multiplication_specialist
+
